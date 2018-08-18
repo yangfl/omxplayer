@@ -36,11 +36,13 @@ Install with
 You need the content of your sdcard somewhere mounted or copied. There might be
 development headers to install on the running Pi system for the crosscompiling.
 
-Edit Makefile.include and change the settings according your locations.
+Get crosscompiler from https://github.com/rvagg/rpi-newer-crosstools .
 
-    make ffmpeg
+Install `libasound2-dev libpcre3-dev libidn11-dev libboost-dev libfreetype6-dev libdbus-1-dev libssl1.0-dev libssh-dev libsmbclient-dev libraspberrypi-dev libsystemd-dev libavutil-dev libavcodec-dev libavformat-dev` in your sdcard.
+
+For example: `CROSS_COMPILE=../arm-rpi-linux-gnueabihf/bin/arm-rpi-linux-gnueabihf- SDK_PATH_TARGET=../rootfs make`
+
     make
-    make dist
 
 Installing OMXPlayer
 
